@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Week 1 Assignment</title>
+    <title>Week 2 Assignment</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <header>
-      <p class="site-title">Week 1 HW Assignment</p>
+      <p class="site-title">Week 2 HW Assignment</p>
       <nav aria-label="Primary">
         <a href="#main">Main</a>
       </nav>
@@ -19,11 +19,23 @@
       <h1>Tutoring Request Form</h1>
 
       <section aria-labelledby="sign-up-title">
-        <h2 id ="sign-up-title">Submit a request</h2>
+        <h2 id="sign-up-title">Submit a request</h2>
 
         <form id="sign-up-form" novalidate>
+
+          <label for="name">Full name:</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            aria-describedby="name-error"
+          />
+          <p id="name-error" class="alert" role="alert" hidden></p>
+
             <label for="email">Email:</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"/>
             <p id="email-error" class="alert" role="alert" hidden></p>
 
           
@@ -31,7 +43,7 @@
 
             <label for="help">What do you need help with?</label>
             
-            <textarea id="help" name="help" placeholder="Include the topic in the CS324 course you need help with here (at least 10 Characters)" required></textarea>
+            <textarea id="help" name="help" placeholder="Include the topic in the CS324 course you need help with here (at least 10 Characters)" required minlength="10" aria-describedby="help-error"></textarea>
 
             <p id="help-error" class="alert" role="alert" hidden></p>
             <button type="submit">Submit a Request</button>
