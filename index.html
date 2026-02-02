@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Week 1 Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <p class="site-title">Week 1 HW Assignment</p>
+      <nav aria-label="Primary">
+        <a href="#main">Main</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>Tutoring Request Form</h1>
+
+      <section aria-labelledby="sign-up-title">
+        <h2 id ="sign-up-title">Submit a request</h2>
+
+        <form id="sign-up-form" novalidate>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <p id="email-error" class="alert" role="alert" hidden></p>
+
+          
+            
+
+            <label for="help">What do you need help with?</label>
+            
+            <textarea id="help" name="help" placeholder="Include the topic in the CS324 course you need help with here (at least 10 Characters)" required></textarea>
+
+            <p id="help-error" class="alert" role="alert" hidden></p>
+            <button type="submit">Submit a Request</button>
+            
+
+            <!--Accessibility improvements - use of (#main) and aria-live="polite"  to announce form status -->
+            <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    </main>
+
+    <footer>
+      <small>Built for CS324 </small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
